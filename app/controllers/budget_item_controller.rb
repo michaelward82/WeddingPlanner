@@ -1,2 +1,0 @@
-class BudgetItemController < ApplicationController
-end
