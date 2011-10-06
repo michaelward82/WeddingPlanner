@@ -6,4 +6,5 @@ WeddingPlanner::Application.routes.draw do
   resources :users
   resources :sessions
   resource :budget
+  resources :budget_items
 end

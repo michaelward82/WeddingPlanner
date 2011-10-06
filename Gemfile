@@ -8,6 +8,7 @@ gem 'rails', '3.1.0'
 gem 'sqlite3'
 gem 'mongrel', '1.2.0.pre2'
 gem 'bcrypt-ruby', :require => "bcrypt"
+gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 
 
 # Gems used only for assets and not required
