@@ -1,0 +1,69 @@
+$pink: #ec2d91;
+$light-grey-text: #888;
+$default-padding: 10px;
+$large-padding: 20px;
+
+header {
+	padding: $default-padding 0;
+	margin-bottom: $large-padding;
+	border-bottom: 2px solid $pink;
+	position: relative;
+}
+header #toplinks {
+  position: absolute;
+  bottom: 5px;
+  right: -5px;
+}
+
+footer {
+  margin-top: $large-padding;
+  border-top: 1px solid #ccc;
+  padding: $default-padding 0;
+  text-align: center;
+  font-size: 10px;
+  color: $light-grey-text;
+  clear: both;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions a {
+  visibility: hidden;
+}
+tr:hover a {
+  visibility: visible;
+}
+
+.field_with_errors {
+  display: inline;
+  color: red;
+}
+.field_with_errors input.text {
+  border-color: red;
+}
+
+.company {
+  color: #888;
+  font-size: 10px;
+}
+table#phone_index thead tr th {
+  border: 1px solid #fff;
+}
+table#phone_index thead tr .header {
+  background-image: url(/assets/bg.gif);
+  background-repeat: no-repeat;
+  background-position: center right;
+  cursor: pointer;
+}
+table#phone_index thead tr .headerSortDown {
+  background-image: url(/assets/desc.gif);
+}
+table#phone_index thead tr .headerSortUp {
+  background-image: url(/assets/asc.gif);
+}

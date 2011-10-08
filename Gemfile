@@ -10,6 +10,7 @@ gem 'mongrel', '1.2.0.pre2'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem "acts_as_list"
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
+gem "blueprint-rails"
 
 
 # Gems used only for assets and not required
