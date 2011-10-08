@@ -42,13 +42,6 @@ h1 {
   text-align: center;
 }
 
-.actions a {
-  visibility: hidden;
-}
-tr:hover a {
-  visibility: visible;
-}
-
 .field_with_errors {
   display: inline;
   color: red;

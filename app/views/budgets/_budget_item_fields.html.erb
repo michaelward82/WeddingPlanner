@@ -1,9 +1,18 @@
 <div class="budget_item">
-	
-	<%= f.label :description %> 		<%= f.text_field :description %>
-	<%= f.label :estimated_cost %> 	<%= f.text_field :estimated_cost %>
-	<%= f.label :actual_cost %> 		<%= f.text_field :actual_cost %>
+	<span class="description span-11">
+		<%= f.label :description %> <%= f.text_field :description %>
+	</span>
+	<span class="estimated_cost span-6">
+		<%= f.label :estimated_cost %> <%= f.text_field :estimated_cost %>
+	</span>
+	<span class="actual_cost span-5">
+		<%= f.label :actual_cost %> <%= f.text_field :actual_cost %>
+	</span>	
 	<%= f.hidden_field :position, :class => "position" %>
-	<%= f.link_to_remove "Remove this task" %>
-	<span class="handle"><%= image_tag "drag-drop-icon.gif", :title => "drag to re-arrange" %></span>
+	<div class="actions">
+		<%= f.link_to_remove do %>
+			<%= image_tag "icons/delete.png" %>
+		<% end -%>
+		<span class="handle"><%= image_tag "drag-drop-icon.gif" %></span>
+	</div>
 </div>

@@ -1,0 +1,50 @@
+.budget_item {
+  overflow: hidden;
+}
+.budget_item input {
+  border: 1px dotted #ccc;
+  background-color: #fff;
+}
+.budget_item input:hover, .budget_item input:focus {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.budget_item .description input {
+  width: 330px;
+  margin-right: 20px;
+}
+.budget_item .estimated_cost input {
+  margin-right: 20px;
+}
+.budget_item .estimated_cost input,
+.budget_item .actual_cost input {
+  margin-right: 20px;
+  width: 90px;
+}
+.budget_item:hover {
+  background-color: #f7f7f7;
+}
+.budget_item {
+  border-bottom: 1px dotted #ccc;
+  padding: 5px 0;
+}
+.budget_item .actions {
+  visibility: hidden;
+  float: right;
+  height: 25px;
+  line-height: 25px;
+  margin-right: 10px;
+}
+.budget_item .actions img {
+  vertical-align: middle;
+}
+.budget_item:hover .actions {
+  visibility: visible;
+}
+.budget_item .actions a:link, .budget_item .actions a:visited {
+  text-decoration: none;
+  margin-right: 10px;
+}
+.budget_item:hover .actions .handle {
+ cursor: ns-resize; 
+}
