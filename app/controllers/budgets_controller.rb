@@ -3,7 +3,7 @@ class BudgetsController < ApplicationController
     if current_user
       @budget = current_user.budget
       if @budget.budget_items.empty?
-
+        #TODO: create budget if it doesn't exist
       end
     else
       redirect_to log_in_path
@@ -21,5 +21,11 @@ class BudgetsController < ApplicationController
     else
       redirect_to sign_in_path, :notice => "Please sign-in or register"
     end
+  end
+  
+  def sort
+    @budget = current_user.budget
+    @budget.update_attributes(params[:budget])
+    render :nothing => true
   end
 end

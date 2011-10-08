@@ -5,6 +5,7 @@ WeddingPlanner::Application.routes.draw do
   root :to => "users#new"
   resources :users
   resources :sessions
-  resource :budget
-  resources :budget_items
+  resource :budget do
+    put 'sort', on: :collection
+  end
 end
