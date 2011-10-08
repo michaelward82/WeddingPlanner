@@ -17,9 +17,12 @@
   margin-right: 20px;
 }
 .budget_item .estimated_cost input,
-.budget_item .actual_cost input {
+.budget_item .actual_cost input,
+#estimated_total input,
+#actual_total input {
   margin-right: 20px;
-  width: 90px;
+  width: 65px;
+  text-align: right;
 }
 .budget_item:hover {
   background-color: #f7f7f7;
@@ -30,10 +33,8 @@
 }
 .budget_item .actions {
   visibility: hidden;
-  float: right;
   height: 25px;
   line-height: 25px;
-  margin-right: 10px;
 }
 .budget_item .actions img {
   vertical-align: middle;
@@ -47,4 +48,8 @@
 }
 .budget_item:hover .actions .handle {
  cursor: ns-resize; 
+}
+#estimated_total input, #actual_total input {
+  border: none;
+  cursor: default;
 }

@@ -1,37 +1,21 @@
 <% content_for :javascript do %>
 	<%= javascript_tag do %>
-		// Sorting the list
-		$(document).ready(function(){
-			$('#budget_items').sortable({
-				axis: 'y',
-				dropOnEmpty: false,
-				handle: '.handle',
-				cursor: 'crosshair',
-				items: '.fields',
-				opacity: 0.4,
-				scroll: true,
-				update: function(){
-					$('#budget_items .budget_item').each(function(i) {
-						$(".position", this).val(i+1);
-					})
-					$.ajax({
-						type: 'post',
-						data: $('form').serialize(),
-						dataType: 'script',
-						complete: function(request){
-							$('#budget_items').effect('highlight');
-						},
-						url: '/budget/sort'
-					})
-				}
-			});
-		});
+		
 	<% end %>
 <% end %>
 
 <%= nested_form_for @budget do |f| %>
 	<div id="budget_items">
 		<%= f.fields_for :budget_items %>
+	</div>
+	<div id="budget_live_totals">
+		<div id="estimated_total" class="span-6 prepend-11">
+			<strong class="span-3">Estimated Total:</strong> 
+			<span class="span-3 last"><input type="text" readonly="readonly" /></span>
+		</div>
+		<div id="actual_total" class="span-5 append-2 last">
+			<strong>Actual Total:</strong> <input type="text" readonly=readonly</span>
+		</div>
 	</div>
 	<p><%= f.link_to_add "Add a Budget Item", :budget_items %></p>
 	<%= f.submit  %>
