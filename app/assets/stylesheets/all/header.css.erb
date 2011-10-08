@@ -1,0 +1,205 @@
+#header {
+	float: left;
+  margin: 0 0 10px;
+}
+#toplinks {
+	font-size: 11px;
+  line-height: 25px;
+  text-align: right;
+}
+#logo {
+	float: left;
+  height: 138px;
+  width: 222px;
+}
+#leaderboard {
+	float: left;
+  height: 90px;
+  margin-bottom: 8px;
+  width: 728px;
+}
+#searches {
+	border-right: 1px solid #CCCCCC;
+  float: left;
+  width: 473px;
+	line-height: 40px;
+	padding: 0 10px 0 0;
+}
+#basket {
+	float: left;
+  height: 40px;
+  padding: 0 0 0 10px;
+  width: 234px;
+	line-height: 40px;
+	text-align: right;
+	font-size: 11px;
+	background: url("<%= asset_path 'basket.gif' %>") no-repeat scroll 7px center transparent;
+	position: relative;
+}
+#basket a:link, #basket a:visited {
+	color: #666;
+	text-decoration: none;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left: 0;
+	right:0;
+}
+#basket a:link img, #basket a:visited img {
+	border: none;
+}
+#basket a:hover {
+	text-decoration: none;
+}
+#basket a span {
+	float: left;
+	margin-left: 45px;
+}
+#basket a span:hover {
+	text-decoration: underline;
+}
+#basket img {
+	float: right;
+  margin-left: 5px;
+  margin-top: 7px;
+}
+#mainmenu {
+	position: relative;
+	margin:	0 auto;
+	padding: 0;
+	width: 948px;
+	border: 1px solid #ccc;
+	border-right: none;
+	background: url("<%= asset_path 'menu-grad.gif' %>") repeat-x scroll left 0 transparent;
+	height: 30px;
+	list-style-type: none;
+	font-size: 12px;
+	z-index: 1001;
+	clear: left;
+}
+#mainmenu a:focus, #mainmenu a:active {
+	outline: none;
+}
+#mainmenu li.toplevel {
+	float: left;
+	line-height: 30px;
+}
+#mainmenu #shopicon {
+	padding-left: 2px;
+  padding-right: 6px;
+}
+#mainmenu li.toplevel a.toplevellink {
+	padding: 0 10px;
+	display: block;
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #e1e1e1;
+}
+#mainmenu li.last a.toplevellink {
+	border-right: 1px solid #ccc;
+}
+#mainmenu li.shopmenu a.toplevellink {
+	border-right: 1px solid #ccc;
+}
+#mainmenu li.toplevel a.toplevellink:hover {
+	background: url("<%= asset_path 'menu-grad.gif' %>") repeat-x scroll left -60px transparent;
+}
+#mainmenu li.toplevel a.on:hover {
+	background: #fff;
+}
+#mainmenu li.active a.toplevellink {
+	background: url("<%= asset_path 'menu-grad.gif' %>") repeat-x scroll left -30px transparent;
+}
+#mainmenu li.toplevel a.on {
+	background-color: #FFFFFF;
+  border-bottom: 1px double #FFFFFF;
+  border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  height: 40px;
+  margin-left: -1px;
+  padding-left: 11px;
+  position: relative;
+  z-index: 1001;
+}
+#mainmenu div.menuchild {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+	right: 10px;
+	border: 1px solid #ccc;
+	border-top: 4px solid #ccc;
+	background-color: #fff;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 1001;
+}
+#mainmenu div.menuchild .panel {
+	text-align: center;
+}
+#mainmenu .titlecol {
+	border-right: 1px solid #CCCCCC;
+  float: left;
+  width: 150px;
+}
+#mainmenu .titlecol ul {
+	margin: 0;
+	padding: 5px 0;
+	list-style-type: none;
+}
+#mainmenu .titlecol ul li {
+	line-height: 23px;
+}
+#mainmenu .titlecol ul li a {
+	color: #444;
+	padding: 0 10px;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+}
+#mainmenu .titlecol ul li.active a {
+	background-color: #fdeff5;
+}
+#mainmenu .titlecol ul li a:hover {
+	background-color: #eee;
+}
+#mainmenu .col {
+	float: left;
+	text-align: left;
+}
+#mainmenu .wow {
+	background: url(menu-grad-yellow.gif) repeat-x;
+	border-left: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+	right: 1px solid #CCCCCC;
+}
+#mainmenu .wow a:hover strong {
+  color: #ec2d91;
+}
+#mainmenu .col ul {
+	padding: 5px 0;
+	color: #ccc;
+  list-style-type: square;
+  margin: 0 0 0 21px;
+}
+#mainmenu .col ul li {
+	line-height: 23px;
+}
+#mainmenu .col ul li a {
+	padding: 0 10px 0 0;
+	display: block;
+	text-decoration:none;
+	color: #666;
+}
+#mainmenu .col ul li a:hover {
+	text-decoration: underline;
+}
+#pageoverlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
