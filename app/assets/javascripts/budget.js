@@ -6,28 +6,23 @@ function ajax_submit_budget() {
 		url: '/budget/sort'
 	})
 }
-function calculate_estimated_budget_total() {
+function calculate_budget_totals() {
 	var budget_estimated_total = 0;
 	$(".budget_item .estimated_cost input").each(function() {
 		if (parseFloat($(this).val()) > 0 ) {
 			budget_estimated_total += parseFloat($(this).val());
 		}
-		console.log(this);
-		console.log(budget_estimated_total);
 	})
 	$("#estimated_total input").val(budget_estimated_total.toString());
-	ajax_submit_budget();
-}
-function calculate_actual_budget_total() {
+	
 	var budget_actual_total = 0;
 	$(".budget_item .actual_cost input").each(function() {
 		if (parseFloat($(this).val()) > 0 ) {
 			budget_actual_total += parseFloat($(this).val());
 		}
-		console.log(this);
-		console.log(budget_actual_total);
 	})
 	$("#actual_total input").val(budget_actual_total.toString());
+	
 	ajax_submit_budget();
 }
 
@@ -50,13 +45,9 @@ $(function() {
   			ajax_submit_budget();
   		}
   	});
-  	calculate_estimated_budget_total();
-  	calculate_actual_budget_total();
-  	$(".budget_item .estimated_cost input").live('blur', function() {
-  		calculate_estimated_budget_total();
-  	})
-  	$(".budget_item .actual_cost input").live('blur', function() {
-  		calculate_actual_budget_total();
+  	calculate_budget_totals();
+  	$(".budget_item input").live('blur', function() {
+  		calculate_budget_totals();
   	})
   }
 })
