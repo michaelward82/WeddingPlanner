@@ -1,11 +1,3 @@
-function ajax_submit_budget() {
-	$.ajax({
-		type: 'post',
-		data: $('form').serialize(),
-		dataType: 'script',
-		url: '/budget/sort'
-	})
-}
 function calculate_budget_totals() {
 	var budget_estimated_total = 0;
 	$(".budget_item .estimated_cost input").each(function() {
@@ -22,8 +14,6 @@ function calculate_budget_totals() {
 		}
 	})
 	$("#actual_total input").val(budget_actual_total.toString());
-	
-	ajax_submit_budget();
 }
 
 
@@ -42,12 +32,14 @@ $(function() {
   			$('#budget_items .budget_item').each(function(i) {
   				$(".position", this).val(i+1);
   			})
-  			ajax_submit_budget();
   		}
   	});
   	calculate_budget_totals();
-  	$(".budget_item input").live('blur', function() {
-  		calculate_budget_totals();
+  	$("#budget_items input").live('blur', function() {
+  	  calculate_budget_totals();
   	})
+  	$("form").live("nested:fieldAdded", function() {
+  	  $("p > .fields").appendTo($("#budget_items"));
+  	});
   }
 })

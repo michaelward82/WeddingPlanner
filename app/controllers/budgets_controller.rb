@@ -11,21 +11,11 @@ class BudgetsController < ApplicationController
   end
   
   def update
-    if current_user
-      @budget = current_user.budget
-      if @budget.update_attributes(params[:budget])
-        redirect_to budget_path, flash[:success] => "Item added"
-      else
-        redirect_to budget_path, flash[:error] => "Item not added"
-      end
-    else
-      redirect_to sign_in_path, :notice => "Please sign-in or register"
-    end
-  end
-  
-  def sort
     @budget = current_user.budget
-    @budget.update_attributes(params[:budget])
-    render :nothing => true
+    if @budget.update_attributes(params[:budget])
+      render :action => "show", :notice => "Budget changes saved"
+    else
+      render :action => "show", :notice => "Budget changes were not saved"
+    end
   end
 end
