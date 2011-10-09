@@ -17,6 +17,7 @@
 			<strong>Actual Total:</strong> <input type="text" readonly=readonly</span>
 		</div>
 	</div>
-	<p><%= f.link_to_add "Add a Budget Item", :budget_items %></p>
-	<%= f.submit  %>
+	<p><%= f.link_to_add :budget_items, :class => "button positive" do %>
+		<%= image_tag "icons/add.png", :title => "title", :class => "class" %> Add a Budget Item 
+	<% end %></p>
 <% end %>
