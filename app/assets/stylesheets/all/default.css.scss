@@ -15,6 +15,10 @@ header #toplinks {
   right: -5px;
 }
 
+#content {
+  margin: 10px 0;
+}
+
 footer {
   margin-top: $large-padding;
   border-top: 1px solid #ccc;
@@ -36,6 +40,8 @@ a:link, a:visited {
 
 h1 {
   font-size: 25px;
+  color: #ec2d91;
+  margin: 0 0 20px 0;
 }
 
 .actions {
@@ -54,18 +60,5 @@ h1 {
   color: #888;
   font-size: 10px;
 }
-table#phone_index thead tr th {
-  border: 1px solid #fff;
-}
-table#phone_index thead tr .header {
-  background-image: url(/assets/bg.gif);
-  background-repeat: no-repeat;
-  background-position: center right;
-  cursor: pointer;
-}
-table#phone_index thead tr .headerSortDown {
-  background-image: url(/assets/desc.gif);
-}
-table#phone_index thead tr .headerSortUp {
-  background-image: url(/assets/asc.gif);
-}
+/*  Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }

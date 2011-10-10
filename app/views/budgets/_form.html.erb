@@ -1,20 +1,32 @@
+<div id="budget_headers">
+	<div class="span-12" id="description_header">
+		<strong>Description</strong> 
+	</div>
+	<div class="span-5" id="estimated_cost_header">
+		<strong>Estimated Cost</strong> 
+	</div>
+	<div class="span-5 append-2 last" id="actual_cost_header">
+		<strong>Actual Cost</strong>
+	</div>
+</div>
 <%= nested_form_for @budget do |f| %>
 	<div id="budget_items">
 		<%= f.fields_for :budget_items %>
 	</div>
 	<div id="budget_live_totals">
-		<div id="estimated_total" class="span-6 prepend-11">
-			<strong class="span-3">Estimated Total:</strong> 
-			<span class="span-3 last"><input type="text" readonly="readonly" /></span>
+		<div id="estimated_total" class="span-5 prepend-12">
+			<strong class="span-3"><span>Estimated&nbsp;Total:</span></strong> 
+			<span class="span-2 last"><input type="text" readonly="readonly" /></span>
 		</div>
 		<div id="actual_total" class="span-5 append-2 last">
-			<strong>Actual Total:</strong> <input type="text" readonly=readonly</span>
+			<strong class="span-3">Actual Total:</strong>
+			<span class="span-2 last"><input type="text" readonly=readonly /></span>
 		</div>
 	</div>
-	<p><%= f.link_to_add :budget_items, :class => "button positive" do %>
+	<p class="form_actions"><%= f.link_to_add :budget_items, :class => "button positive" do %>
 		<%= image_tag "icons/add.png", :title => "title", :class => "class" %> Add a Budget Item 
 	<% end %>
-	<%= content_tag :button, :type => :submit, :class => :positive do %>
+	<%= content_tag :button, :type => :submit, :class => :positive, :style => "margin-right: 0;" do %>
 	   <%= image_tag "icons/table_save.png"%> Save Budget
 	<% end %>
 	</p>

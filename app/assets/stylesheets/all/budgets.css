@@ -1,35 +1,66 @@
+.edit_budget {
+  float: left;
+}
+#budget_headers {
+  background-color: #eee;
+  float: left;
+  padding: 10px 0;
+}
+#budget_headers #description_header strong {
+  padding-left: 10px;
+}
+#budget_headers #estimated_cost_header, #budget_headers #actual_cost_header {
+  text-align: right;
+}
 .budget_item {
   overflow: hidden;
 }
 .budget_item input {
-  border: 1px dotted #ccc;
+  border: 1px solid #fff;
   background-color: #fff;
 }
-.budget_item input:hover, .budget_item input:focus {
+.budget_item input:focus {
   border: 1px solid #ccc;
   background-color: #fff;
 }
 .budget_item .description input {
-  width: 330px;
-  margin-right: 20px;
-}
-.budget_item .estimated_cost input {
-  margin-right: 20px;
+  width: 445px;
+  margin-left: 10px;
 }
 .budget_item .estimated_cost input,
 .budget_item .actual_cost input,
 #estimated_total input,
 #actual_total input {
-  margin-right: 20px;
-  width: 65px;
+  width: 55px;
   text-align: right;
+  float: right;
+}
+#estimated_total strong,
+#actual_total strong {
+  text-align: right;
+  line-height: 27px;
 }
 .budget_item:hover {
   background-color: #f7f7f7;
 }
+.budget_item:hover input {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
 .budget_item {
   border-bottom: 1px dotted #ccc;
   padding: 5px 0;
+}
+.budget_item .estimated_cost label,
+.budget_item .actual_cost label {
+  visibility: hidden;
+  color: #888;
+  text-align: right;
+  line-height: 27px;
+}
+.budget_item:hover .estimated_cost label,
+.budget_item:hover .actual_cost label {
+  visibility: visible;
 }
 .budget_item .actions {
   visibility: hidden;
@@ -49,7 +80,18 @@
 .budget_item:hover .actions .handle {
  cursor: ns-resize; 
 }
-#estimated_total input, #actual_total input {
-  border: none;
-  cursor: default;
+#budget_live_totals {
+  float: left;
+  background-color: #888;
+  color: #fff;
+  margin: -1px 0 10px 0;
+}
+#budget_live_totals input {
+  border: 1px solid transparent;
+  cursor: default; 
+  color: #fff;
+  background-color: transparent;
+}
+.form_actions {
+  float: right;
 }
