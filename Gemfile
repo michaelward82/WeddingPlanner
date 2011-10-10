@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'mongrel', '1.2.0.pre2'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem "acts_as_list"
