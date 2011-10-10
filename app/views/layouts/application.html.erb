@@ -13,14 +13,11 @@
 	<body>
 		<div class="container">
 			<%= render :partial => 'shared/header' %>
-
-
-
-			<% flash.each do |name, msg| %>
-				<%= content_tag :div, msg, :id => "flash_#{name}" %>
-			<% end %>
 			
 			<div id="content" class="span-24">
+				<%= render :partial => 'shared/error_messages' %>
+
+				
 				<%= yield %>
 			</div>
 		</div>
