@@ -30,13 +30,20 @@
   width: 445px;
   margin-left: 10px;
 }
+.estimated_cost, .actual_cost {
+  color: #888;
+}
+.estimated_cost, .actual_cost,
+#estimated_total, #actual_total {
+  line-height: 27px;
+  text-align: right;
+}
 .budget_item .estimated_cost input,
 .budget_item .actual_cost input,
 #estimated_total input,
 #actual_total input {
-  width: 55px;
+  width: 45px;
   text-align: right;
-  float: right;
 }
 #estimated_total strong,
 #actual_total strong {

@@ -4,11 +4,11 @@
 	</span>
 	<span class="estimated_cost span-5">
 		<%= f.label :estimated_cost, :class => "span-3" %> 
-		<%= f.text_field :estimated_cost, :class => "span-2 last" %>
+		<span class="span-2 last">&pound;&nbsp;<%= f.text_field :estimated_cost %></span>
 	</span>
 	<span class="actual_cost span-5">
 		<%= f.label :actual_cost, :class => "span-3" %> 
-		<%= f.text_field :actual_cost, :class => "span-2 last" %>
+		<span class="span-2 last">&pound;&nbsp;<%= f.text_field :actual_cost %></span>
 	</span>	
 	<%= f.hidden_field :position, :class => "position" %>
 	<div class="actions span-2 last">
