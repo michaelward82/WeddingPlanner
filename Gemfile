@@ -6,7 +6,7 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'mongrel', '1.2.0.pre2'
+gem 'thin'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem "acts_as_list"
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
@@ -31,6 +31,11 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+
+group :development do
+  gem 'sqlite3'
+end
 
 group :test do
   # Pretty printed test output
