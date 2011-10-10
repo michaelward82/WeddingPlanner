@@ -5,13 +5,15 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
 gem 'thin'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem "acts_as_list"
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 gem "blueprint-rails"
 
+group :production do
+  gem 'pg'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
