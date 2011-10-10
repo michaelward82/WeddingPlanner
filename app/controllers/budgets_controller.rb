@@ -13,9 +13,9 @@ class BudgetsController < ApplicationController
   def update
     @budget = current_user.budget
     if @budget.update_attributes(params[:budget])
-      render :action => "show", :notice => "Budget changes saved"
+      redirect_to budget_path, :notice => "Budget changes saved"
     else
-      render :action => "show", :notice => "Budget changes were not saved"
+      redirect_to budget_path, :notice => "Budget changes were not saved"
     end
   end
 end
