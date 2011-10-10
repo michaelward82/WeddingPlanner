@@ -1,6 +1,6 @@
 function calculate_budget_totals() {
 	var budget_estimated_total = 0;
-	$(".budget_item .estimated_cost input").each(function() {
+	$(".fields:visible .budget_item .estimated_cost input").each(function() {
 		if (parseFloat($(this).val()) > 0 ) {
 			budget_estimated_total += parseFloat($(this).val());
 		}
@@ -8,7 +8,7 @@ function calculate_budget_totals() {
 	$("#estimated_total input").val(budget_estimated_total.toString());
 	
 	var budget_actual_total = 0;
-	$(".budget_item .actual_cost input").each(function() {
+	$(".fields:visible .budget_item .actual_cost input").each(function() {
 		if (parseFloat($(this).val()) > 0 ) {
 			budget_actual_total += parseFloat($(this).val());
 		}
@@ -40,6 +40,9 @@ $(function() {
   	})
   	$("form").live("nested:fieldAdded", function() {
   	  $("p > .fields").appendTo($("#budget_items"));
+  	});
+  	$("form").live("nested:fieldRemoved", function() {
+  	   calculate_budget_totals();
   	});
   }
 })
