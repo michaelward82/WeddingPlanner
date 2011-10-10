@@ -1,3 +1,4 @@
+<%= nested_form_for @budget do |f| %>
 <div id="budget_headers">
 	<div class="span-12" id="description_header">
 		<strong>Description</strong> 
@@ -9,7 +10,6 @@
 		<strong>Actual Cost</strong>
 	</div>
 </div>
-<%= nested_form_for @budget do |f| %>
 	<div id="budget_items">
 		<%= f.fields_for :budget_items %>
 	</div>
