@@ -3,7 +3,7 @@ class BudgetsController < ApplicationController
     if current_user
       @budget = current_user.budget
       if @budget.budget_items.empty?
-        #TODO: create budget if it doesn't exist
+        @budget.budget_items.new
       end
     else
       redirect_to log_in_path
