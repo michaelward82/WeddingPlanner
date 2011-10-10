@@ -10,6 +10,8 @@ gem 'bcrypt-ruby', :require => "bcrypt"
 gem "acts_as_list"
 gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 gem "blueprint-rails"
+gem 'json'
+gem 'json_pure'
 
 group :production do
   gem 'pg'

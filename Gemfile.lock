@@ -61,6 +61,8 @@ GEM
     jquery-rails (1.0.14)
       railties (~> 3.0)
       thor (~> 0.14)
+    json (1.6.1)
+    json_pure (1.6.1)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -132,6 +134,8 @@ DEPENDENCIES
   blueprint-rails
   coffee-rails (~> 3.1.0)
   jquery-rails
+  json
+  json_pure
   nested_form!
   pg
   rails (= 3.1.0)
