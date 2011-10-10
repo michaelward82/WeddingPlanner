@@ -35,7 +35,7 @@
 }
 .estimated_cost, .actual_cost,
 #estimated_total, #actual_total {
-  line-height: 27px;
+  line-height: 34px;
   text-align: right;
 }
 .budget_item .estimated_cost input,
@@ -48,7 +48,7 @@
 #estimated_total strong,
 #actual_total strong {
   text-align: right;
-  line-height: 27px;
+  line-height: 34px;
 }
 .budget_item:hover {
   background-color: #f7f7f7;
@@ -66,7 +66,7 @@
   visibility: hidden;
   color: #888;
   text-align: right;
-  line-height: 27px;
+  line-height: 34px;
 }
 .budget_item:hover .estimated_cost label,
 .budget_item:hover .actual_cost label {
