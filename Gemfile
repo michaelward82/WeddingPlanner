@@ -12,6 +12,7 @@ gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 gem "blueprint-rails"
 gem 'dalli'
 
+
 group :production do
   gem 'pg'
 end
