@@ -29,6 +29,9 @@ a.button, button {
   color:#565656;
   cursor:pointer;
 }
+a.button:hover {
+  text-decoration: none;
+}
 button {
   width:auto;
   overflow:visible;
@@ -67,17 +70,21 @@ a.button:active{
 }
 
 /* Positive */
-body .button.positive {
+.button.positive2, button.positive2 {
   color:#529214;
 }
-a.button.positive:hover, button.positive:hover {
-  background-color:#E6EFC2;
-  border:1px solid #C6D880;
+a.button.positive2:hover, button.positive2:hover {
+  background-color:#eaeaea;
+  border:1px solid #dedede;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;
   color:#529214;
 }
-a.button.positive:active {
-  background-color:#529214;
-  border:1px solid #529214;
+a.button.positive2:active {
+  background-color:#eaeaea;
+  border:1px solid #dedede;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;
   color:#fff;
 }
 
@@ -87,11 +94,15 @@ body .button.negative {
 }
 a.button.negative:hover, button.negative:hover {
   background-color:#fbe3e4;
-  border:1px solid #fbc2c4;
+  border:1px solid #dedede;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;
   color:#d12f19;
 }
 a.button.negative:active {
   background-color:#d12f19;
-  border:1px solid #d12f19;
+  border:1px solid #dedede;
+  border-top:1px solid #eee;
+  border-left:1px solid #eee;
   color:#fff;
 }
