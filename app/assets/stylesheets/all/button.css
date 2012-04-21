@@ -38,7 +38,7 @@ button[type] {
   padding:4px 10px 4px 7px;   /* Firefox */
   line-height:17px;           /* Safari */
 }
-*:first-child+html button[type] {
+*:first-child + html button[type] {
   padding:4px 10px 3px 7px;   /* IE7 */
 }
 button img, a.button img{
