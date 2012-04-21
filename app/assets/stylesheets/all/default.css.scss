@@ -3,30 +3,8 @@ $light-grey-text: #888;
 $default-padding: 10px;
 $large-padding: 20px;
 
-header {
-	padding: $default-padding 0;
-	margin-bottom: $large-padding;
-	border-bottom: 2px solid $pink;
-	position: relative;
-}
-header #toplinks {
-  position: absolute;
-  bottom: 5px;
-  right: -5px;
-}
-
 #content {
   margin: 10px 0;
-}
-
-footer {
-  margin: 40px 0;
-  border-top: 1px solid #ccc;
-  padding: $default-padding 0;
-  text-align: center;
-  font-size: 10px;
-  color: $light-grey-text;
-  clear: both;
 }
 
 body {
