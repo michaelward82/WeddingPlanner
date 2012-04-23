@@ -12,6 +12,7 @@ gem 'nested_form', :git => "git://github.com/ryanb/nested_form.git"
 gem "blueprint-rails"
 gem 'json'
 gem 'json_pure'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
