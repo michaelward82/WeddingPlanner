@@ -1,17 +1,15 @@
-<div id="header">
-  	<div id="toplinks"><div id="user_nav">
-		<% if current_user %>
-			Logged in as <%= current_user.email %>
+<div id="my_confetti_toplinks">
+  <div id="user_nav">
+    <% if current_user %>
+      Logged in as <%= current_user.email %>
 			<%= link_to "Log out", log_out_path %>
 		<% else %>
 			<%= link_to "Sign up", sign_up_path %> or
 			<%= link_to "log in", log_in_path %>  
 		<% end %>
 	</div>
-    <div id="logo"><%= image_tag "logo.gif" %></div>
-    <div id="leaderboard"><%= image_tag "leaderboard.jpg" %></div>
-    <div id="searches">Searches</div>
-    <div id="basket"><a href="#"><span><strong>Your Basket:</strong> £86.00</span> <%= image_tag "checkout-btn.gif" %></a></div>
-  </div>
-	<%= render :partial => 'shared/menu' %>
 </div>
+
+<% require 'open-uri' %>
+
+<%= open("http://www.confetti.co.uk/header.aspx").read.html_safe %>

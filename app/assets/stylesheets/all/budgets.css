@@ -3,6 +3,7 @@
 }
 .edit_budget {
   float: left;
+  margin-top: 20px;
 }
 #budget_headers {
   background-color: #eee;
