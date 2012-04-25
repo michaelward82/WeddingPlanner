@@ -45,5 +45,10 @@ module WeddingPlanner
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.serve_static_assets = true
+    config.static_cache_control = "public, max-age=2592000"
+    config.assets.digest = true
+    config.action_controller.perform_caching = true
   end
 end
