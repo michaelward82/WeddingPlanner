@@ -63,4 +63,8 @@ WeddingPlanner::Application.configure do
     :entitystore  => 'file:tmp/cache/rack/body',
     :allow_reload => false
   }
+  config.serve_static_assets = true
+  config.static_cache_control = "public, max-age=2592000"
+  config.assets.digest = true
+  config.action_controller.perform_caching = true
 end
