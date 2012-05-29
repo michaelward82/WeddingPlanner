@@ -19,10 +19,13 @@
 				<%= render :partial => 'shared/error_messages' %>
 
 				<%= yield %>
+
 			</div>
-			<div id="appmenu" class="span-5">
+
+			<div id="appmenu" class="span-5 last">
 				<%= render :partial => 'shared/app-menu' %>
 			</div>
+
 		</div>
 		<%= render :partial => 'shared/footer' %>
 		<%= yield :javascript %>
