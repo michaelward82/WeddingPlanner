@@ -1,6 +1,6 @@
 <%= nested_form_for @budget do |f| %>
 <div id="budget_headers">
-	<div class="span-12" id="description_header">
+	<div class="span-7" id="description_header">
 		<strong>Description</strong> 
 	</div>
 	<div class="span-5" id="estimated_cost_header">
@@ -14,7 +14,7 @@
 		<%= f.fields_for :budget_items %>
 	</div>
 	<div id="budget_live_totals">
-		<div id="estimated_total" class="span-5 prepend-12">
+		<div id="estimated_total" class="span-5 prepend-7">
 			<strong class="span-3"><span>Estimated&nbsp;Total:</span></strong> 
 			<span class="span-2 last">&pound;&nbsp;<input type="text" readonly="readonly" /></span>
 		</div>

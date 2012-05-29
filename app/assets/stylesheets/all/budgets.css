@@ -28,7 +28,7 @@
   background-color: #fff;
 }
 .budget_item .description input {
-  width: 445px;
+  width: 260px;
   margin-left: 10px;
 }
 .estimated_cost, .actual_cost {

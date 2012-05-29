@@ -14,15 +14,20 @@
 	<body>
 		<div id="container" class="container">
 			<%= render :partial => 'shared/header' %>
-			
-			<div id="content" class="span-24">
+
+			<div id="content" class="span-19">
 				<%= render :partial => 'shared/error_messages' %>
 
-				
 				<%= yield %>
+
 			</div>
+
+			<div id="appmenu" class="span-5 last">
+				<%= render :partial => 'shared/app-menu' %>
+			</div>
+
 		</div>
 		<%= render :partial => 'shared/footer' %>
 		<%= yield :javascript %>
-	</body>
+	</body> 
 </html>
