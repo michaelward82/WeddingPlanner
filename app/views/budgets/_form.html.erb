@@ -11,7 +11,9 @@
 	</div>
 </div>
 	<div id="budget_items">
-		<%= f.fields_for :budget_items %>
+		<div class="nested_fields">
+			<%= f.fields_for :budget_items %>
+		</div>
 	</div>
 	<div id="budget_live_totals">
 		<div id="estimated_total" class="span-5 prepend-7">
