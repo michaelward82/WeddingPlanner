@@ -47,4 +47,5 @@ end
 group :test do
   # Pretty printed test output
   gem 'turn', '< 0.8.3', :require => false
+  gem 'simplecov', '>= 0.4.0', :require => false
 end
