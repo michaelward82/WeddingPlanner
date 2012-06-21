@@ -1,12 +1,10 @@
 class BudgetsController < ApplicationController
+  before_filter :require_login
+
   def show
-    if current_user
-      @budget = current_user.budget
-    else
-      redirect_to log_in_path
-    end
+    @budget = current_user.budget
   end
-  
+
   def update
     @budget = current_user.budget
     if @budget.update_attributes(params[:budget])
@@ -14,5 +12,11 @@ class BudgetsController < ApplicationController
     else
       redirect_to budget_path, :flash => { :error => "Budget changes were not saved" }
     end
+  end
+
+  private
+
+  def require_login
+    unless current_user then redirect_to log_in_path end
   end
 end

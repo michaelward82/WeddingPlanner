@@ -52,3 +52,21 @@ Spork.each_run do
     SimpleCov.start 'rails'
   end
 end
+
+def logged_in
+  create_session(create_user)
+end
+
+def create_user
+  user = User.new
+  user.email = "email@example.com"
+  user.password = "password"
+  user.password_confirmation = "password"
+  user.budget = Budget.new
+  user.save
+  return user
+end
+
+def create_session user
+  session[:user_id] = user.id
+end
